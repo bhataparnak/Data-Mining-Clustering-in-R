@@ -32,6 +32,13 @@ Count Number of observations used in calculating dew point
 SLP Sea level pressure for that hour in millibars to tenths.
 Missing = 9999.9
 
+The problem is to cluster stations that have similar weather during that month. First you need to
+iterate for k = 2 to 8. Then for each k do the following (specific details below).
+Cluster stations based on the vector generated for each station for the k values using different
+starting stations for the initial centroid. Choose k stations randomly. Generate clusters of stations
+for each k starting stations. Use one of the two stopping conditions: centroids do not change or not
+more than 1 or 2% change.
+
 Count Number of observations used in calculating sea level
 pressure
 
