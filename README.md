@@ -96,3 +96,5 @@ Snow or Ice Pellets ('S' - 3rd digit).
 Hail ('H' - 4th digit).
 Thunder ('T' - 5th digit).
 Tornado or Funnel Cloud ('T' - 6th digit).
+
+The problem is to cluster stations that have similar weather during that month. First you need to iterate for k = 2 to 8. Then for each k do the following (specific details below). Cluster stations based on the vector generated for each station for the k values using different starting stations for the initial centroid. Choose k stations randomly. Generate clusters of stations for each k starting stations. Use one of the two stopping conditions: centroids do not change or not more than 1 or 2% change.
